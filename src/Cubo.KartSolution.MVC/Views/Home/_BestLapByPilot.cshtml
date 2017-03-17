@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Cubo.KartSolution.Domain.Commands.Results.GetBestLapByPilotCommand>
+
+<h4>Melhor volta por piloto</h4>
+<table class="table table-nonfluid">
+    <tr>
+        <th>Piloto</th>
+        <th>Melhor volta</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.PilotName)</td>
+            <td>@Html.DisplayFor(modelItem => item.BestTimeLap)</td>
+        </tr>
+    }
+</table>
+

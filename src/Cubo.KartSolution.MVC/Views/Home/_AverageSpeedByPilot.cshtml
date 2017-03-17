@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Cubo.KartSolution.Domain.Commands.Results.GetAverageSpeedRaceByPilotCommand>
+
+<h4>Velocidade média por piloto</h4>
+<table class="table table-nonfluid">
+    <tr>
+        <th>Piloto</th>
+        <th>Velocidade média</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.PilotName)</td>
+            <td>@Html.DisplayFor(modelItem => item.AverageSpeedRace)</td>
+        </tr>
+    }
+</table>
+

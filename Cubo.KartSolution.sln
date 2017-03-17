@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation", "1 - Presentation", "{4C79858E-D6F3-4108-B501-96BFE7637313}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{996B8287-2244-409C-A190-0FD663CF52B8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infra", "3 - Infra", "{8CFF9324-1F5C-42D3-8AF8-39D8B1C2D000}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cubo.KartSolution.Domain", "src\Cubo.KartSolution.Domain\Cubo.KartSolution.Domain.csproj", "{752F7692-5C63-4653-AE80-A7DADC5851A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cubo.KartSolution.Infra", "src\Cubo.KartSolution.Infra\Cubo.KartSolution.Infra.csproj", "{F5CD1A29-D280-40D0-864E-EEA671138952}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cubo.KartSolution.MVC", "src\Cubo.KartSolution.MVC\Cubo.KartSolution.MVC.csproj", "{4875738D-20D9-4777-8F19-418D7899E07A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Tests", "4 - Tests", "{8AD25B9D-F305-40A5-8541-9C80572FC010}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cubo.KartSolution.Tests", "tests\Cubo.KartSolution.Tests\Cubo.KartSolution.Tests.csproj", "{F0F2CD41-2AA6-47AD-BC59-276DB0E86C7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cubo.KartSolution.Shared", "src\Cubo.KartSolution.Shared\Cubo.KartSolution.Shared.csproj", "{B67D6732-58A6-4530-8088-A0577DBDC7F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{752F7692-5C63-4653-AE80-A7DADC5851A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{752F7692-5C63-4653-AE80-A7DADC5851A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{752F7692-5C63-4653-AE80-A7DADC5851A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{752F7692-5C63-4653-AE80-A7DADC5851A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5CD1A29-D280-40D0-864E-EEA671138952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5CD1A29-D280-40D0-864E-EEA671138952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5CD1A29-D280-40D0-864E-EEA671138952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5CD1A29-D280-40D0-864E-EEA671138952}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4875738D-20D9-4777-8F19-418D7899E07A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4875738D-20D9-4777-8F19-418D7899E07A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4875738D-20D9-4777-8F19-418D7899E07A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4875738D-20D9-4777-8F19-418D7899E07A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0F2CD41-2AA6-47AD-BC59-276DB0E86C7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0F2CD41-2AA6-47AD-BC59-276DB0E86C7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0F2CD41-2AA6-47AD-BC59-276DB0E86C7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0F2CD41-2AA6-47AD-BC59-276DB0E86C7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B67D6732-58A6-4530-8088-A0577DBDC7F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B67D6732-58A6-4530-8088-A0577DBDC7F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B67D6732-58A6-4530-8088-A0577DBDC7F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B67D6732-58A6-4530-8088-A0577DBDC7F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{752F7692-5C63-4653-AE80-A7DADC5851A9} = {996B8287-2244-409C-A190-0FD663CF52B8}
+		{F5CD1A29-D280-40D0-864E-EEA671138952} = {8CFF9324-1F5C-42D3-8AF8-39D8B1C2D000}
+		{4875738D-20D9-4777-8F19-418D7899E07A} = {4C79858E-D6F3-4108-B501-96BFE7637313}
+		{F0F2CD41-2AA6-47AD-BC59-276DB0E86C7B} = {8AD25B9D-F305-40A5-8541-9C80572FC010}
+		{B67D6732-58A6-4530-8088-A0577DBDC7F6} = {996B8287-2244-409C-A190-0FD663CF52B8}
+	EndGlobalSection
+EndGlobal

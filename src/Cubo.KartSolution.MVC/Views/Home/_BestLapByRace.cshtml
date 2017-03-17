@@ -1,0 +1,15 @@
+﻿@model Cubo.KartSolution.Domain.Commands.Results.GetBestLapByRaceCommand
+
+<h4>Melhor volta da corrida</h4>
+<table class="table table-nonfluid">
+    <tr>
+        <th>Piloto</th>
+        <th>Nº Volta</th>
+        <th>Tempo</th>
+    </tr>
+    <tr>
+        <td>@Html.DisplayFor(x => x.PilotName)</td>
+        <td>@Html.DisplayFor(x => x.LapNumber)</td>
+        <td>@Html.DisplayFor(x => x.BestTimeRace)</td>
+    </tr>
+</table>

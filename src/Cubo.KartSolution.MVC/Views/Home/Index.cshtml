@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Cubo.KartSolution.Domain.Commands.Results.GetRaceResultCommand>
+
+<div class="container"><h2>Kart Solution</h2></div>
+<div class="panel panel-primary">
+    <div class="panel-heading">Resultado da Prova</div>
+    <table class="table" id="raceresult">
+        <tr>
+            <th>Posição Chegada</th>
+            <th>Código Piloto</th>
+            <th>Nome Piloto</th>
+            <th>Voltas Completadas</th>
+            <th>Tempo Total da Prova</th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model.Select((x, i) => new { Data = x, Index = i + 1 }))
+        {
+            <tr>
+                <td class="text-info h4">
+                    @item.Index
+                    @if ((item.Index) == 1)
+                    {
+                        <i class="fa fa-lg fa-trophy"></i>
+                    }
+                </td>
+                <td>@Html.DisplayFor(modelItem => item.Data.PilotCode)</td>
+                <td>
+
+                    @Html.DisplayFor(modelItem => item.Data.PilotName)
+                </td>
+                <td>@Html.DisplayFor(modelItem => item.Data.TotalLaps)</td>
+                <td>@Html.DisplayFor(modelItem => item.Data.TotalProofTime)</td>
+                <td>@Html.DisplayFor(modelItem => item.Data.DiffToFirst)</td>
+            </tr>
+        }
+    </table>
+</div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">Bônus</div>
+
+    <div class="container">
+        <div class="col-xs-4">
+            @{Html.RenderAction("AverageSpeedRaceByPilot", "Home");}
+        </div>
+        <div class="col-xs-4">
+            @{Html.RenderAction("BestLapByPilot", "Home");}
+        </div>
+
+        <div class="col-xs-4">
+            @{Html.RenderAction("BestLapByRace", "Home");}
+        </div>
+    </div>
+</div>

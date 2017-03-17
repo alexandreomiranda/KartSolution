@@ -1,0 +1,10 @@
+﻿
+namespace Cubo.KartSolution.Domain.Commands.Results
+{
+    public class GetAverageSpeedRaceByPilotCommand
+    {
+        public int PilotCode { get; set; }
+        public string PilotName { get; set; }
+        public decimal AverageSpeedRace { get; set; }
+    }
+}

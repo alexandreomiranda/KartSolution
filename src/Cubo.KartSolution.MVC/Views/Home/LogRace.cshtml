@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Cubo.KartSolution.Domain.Entities.Race>
+@{
+    ViewBag.Title = "Kart Race Grid";
+}
+
+<table class="table">
+    <tr>
+        <th>Hora</th>
+        <th>Piloto</th>
+        <th>Nº Volta</th>
+        <th>Tempo Volta</th>
+        <th>Velocidade média da volta</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.DatetimeLap.TimeOfDay)</td>
+            <td>@Html.DisplayFor(modelItem => item.PilotCode) - @Html.DisplayFor(modelItem => item.PilotName)</td>
+            <td>@Html.DisplayFor(modelItem => item.LapNumber)</td>
+            <td>@Html.DisplayFor(modelItem => item.TimeLap)</td>
+            <td>@Html.DisplayFor(modelItem => item.AverageLapSpeed)</td>
+        </tr>
+    }
+
+</table>
