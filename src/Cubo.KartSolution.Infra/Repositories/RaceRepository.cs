@@ -9,10 +9,9 @@ namespace Cubo.KartSolution.Infra.Repositories
 {
     public class RaceRepository : IRaceRepository
     {
-
+        private List<Race> dataRace = DataParser.Parse();
         public IEnumerable<GetRaceResultCommand> GetRaceResult()
         {
-            var dataRace = DataParser.Parse();
             var list = (from t in dataRace
                         group t by new { t.PilotCode } into g
                         let TimePilot = g.Aggregate(new TimeSpan(), (sum, nextData) => sum.Add(nextData.TimeLap))
@@ -35,7 +34,6 @@ namespace Cubo.KartSolution.Infra.Repositories
 
         public IEnumerable<GetAverageSpeedRaceByPilotCommand> GetAverageSpeedRaceByPilot()
         {
-            var dataRace = DataParser.Parse();
             var list = dataRace.GroupBy(x => x.PilotCode)
                             .Select(x => new GetAverageSpeedRaceByPilotCommand
                             {
@@ -48,7 +46,6 @@ namespace Cubo.KartSolution.Infra.Repositories
 
         public IEnumerable<GetBestLapByPilotCommand> GetBestLapByPilot()
         {
-            var dataRace = DataParser.Parse();
             var list = dataRace.GroupBy(x => x.PilotCode)
                             .Select(x => new GetBestLapByPilotCommand
                             {
@@ -61,7 +58,6 @@ namespace Cubo.KartSolution.Infra.Repositories
 
         public GetBestLapByRaceCommand GetBestLapByRace()
         {
-            var dataRace = DataParser.Parse();
             var obj = dataRace.Select(x => new GetBestLapByRaceCommand
             {
                 PilotName = x.PilotName,
@@ -73,7 +69,7 @@ namespace Cubo.KartSolution.Infra.Repositories
 
         public IEnumerable<Race> GetLog()
         {
-            return DataParser.Parse();
+            return dataRace;
         }
     }
 }
