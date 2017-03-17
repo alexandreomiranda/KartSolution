@@ -4,7 +4,7 @@ namespace Cubo.KartSolution.Domain.Entities
 {
     public class Race
     {
-        public Race(DateTime datetimeLap, int pilotCode, string pilotName, int lapNumber, TimeSpan timeLap, decimal averageLapSpeed)
+        public Race(DateTime datetimeLap, int pilotCode, string pilotName, int lapNumber, TimeSpan timeLap, double averageLapSpeed)
         {
             DatetimeLap = datetimeLap;
             PilotCode = pilotCode;
@@ -19,6 +19,6 @@ namespace Cubo.KartSolution.Domain.Entities
         public string PilotName { get; private set; }
         public int LapNumber { get; private set; }
         public TimeSpan TimeLap { get; private set; }
-        public decimal AverageLapSpeed { get; private set; }
+        public double AverageLapSpeed { get; private set; }
     }
 }

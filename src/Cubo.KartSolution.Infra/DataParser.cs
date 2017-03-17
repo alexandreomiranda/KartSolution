@@ -29,7 +29,7 @@ namespace Cubo.KartSolution.Infra
                     string pilotName = parts[1].Substring(4);
                     int lapNumber = Convert.ToInt32(parts[2]);
                     TimeSpan timeLap = DateTime.ParseExact(parts[3], "m:ss.fff", CultureInfo.CurrentCulture).TimeOfDay;
-                    decimal averageLapSpeed = Convert.ToDecimal(parts[4]);
+                    double averageLapSpeed = Convert.ToDouble(parts[4]);
                     r = new Race(datetimeLap, pilotCode, pilotName, lapNumber, timeLap, averageLapSpeed);
                     data.Add(r);
                 }

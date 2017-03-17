@@ -8,10 +8,10 @@ namespace Cubo.KartSolution.Tests.Scopes
     [TestClass]
     public class RaceSpecTests
     {
-        private Race _validRace = new Race(DateTime.Now, 038, "F.MASSA", 1, new TimeSpan(1, 02, 852), 44.275m);
-        private Race _invalidPilotCode = new Race(DateTime.Now, 0, "F.MASSA", 1, new TimeSpan(1, 02, 852), 44.275m);
-        private Race _invalidPilotName = new Race(DateTime.Now, 038, "", 1, new TimeSpan(1, 02, 852), 44.275m);
-        private Race _invalidLapNumber = new Race(DateTime.Now, 038, "F.MASSA", 0, new TimeSpan(1, 02, 852), 44.275m);
+        private Race _validRace = new Race(DateTime.Now, 038, "F.MASSA", 1, new TimeSpan(1, 02, 852), 44.275d);
+        private Race _invalidPilotCode = new Race(DateTime.Now, 0, "F.MASSA", 1, new TimeSpan(1, 02, 852), 44.275d);
+        private Race _invalidPilotName = new Race(DateTime.Now, 038, "", 1, new TimeSpan(1, 02, 852), 44.275d);
+        private Race _invalidLapNumber = new Race(DateTime.Now, 038, "F.MASSA", 0, new TimeSpan(1, 02, 852), 44.275d);
 
         [TestMethod]
         [TestCategory("Race - Create")]
